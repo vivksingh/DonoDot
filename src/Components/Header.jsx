@@ -13,7 +13,7 @@ function Header(){
     const navigation = [
         { name: 'Home', href: '/' },
         { name: 'Donate', href: '/donate' },
-        { name: 'Claim', href: '#' },
+        { name: 'Claim', href: '/claim' },
         { name: 'About us', href: '#' },
       ]
     
