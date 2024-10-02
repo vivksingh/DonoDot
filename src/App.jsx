@@ -5,6 +5,7 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import Dummy from './Components/Dummy'
 import DonatePage from './Components/DonateForm/DonatePage'
 import ClaimPage from './Components/ClaimPage/ClaimPage'
+import AboutUs from './Components/AboutUs'
 
 function App() {
   
@@ -16,7 +17,7 @@ function App() {
         <Route path='/' element = {<HeroSection />} />
         <Route path='/donate' element = {<DonatePage />} />
         <Route path='/claim' element = {<ClaimPage />} />
-        <Route path='/about-us' element = {<Dummy />} />
+        <Route path='/about-us' element = {<AboutUs />} />
       </Routes>
 
       <Footer />

@@ -3,6 +3,7 @@ import { CiInstagram } from "react-icons/ci";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { CgMail } from "react-icons/cg";
 import { FaYoutube, FaFacebook } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -29,11 +30,11 @@ function Footer() {
       </div>
 
       <div id="links" className="flex flex-col gap-5 sm:flex-row sm:gap-12">
-        <a href="">Terms of Use</a>
-        <a href="">About Us</a>
-        <a href="">FAQs</a>
-        <a href="">Contact Us</a>
-        <a href="">Our Mission</a>
+        <a href="/about-us">Terms of Use</a>
+        <a href="/about-us">About Us</a>
+        <a href="/about-us#faq">FAQs</a>
+        <a href="/about-us">Contact Us</a>
+        <Link to="/about-us#mission">Our Mission</Link>
         </div>
 
 

@@ -1,16 +1,31 @@
-
-
-function ClaimCard({item}){
-    return(
-
-        <div className="p-5 border-2 border-gray-900 rounded-lg">
-            <h1 className="text-2xl font-bold"> {item.name} </h1>
-            <p className="text-lg"> Quantity: {item.quantity} </p>
-            <p className="text-lg"> Message: {item.message} </p>
-            <p className="text-lg"> Pickup Details: {item.pickupDetails} </p>
-            <button className="text-gray-900 p-2 rounded-lg mt-10 font-bold border-2 hover:text-white hover:bg-indigo-600">Claim</button>
+function ClaimCard({ item }) {
+    return (
+      <div className="p-5 overflow-hidden w-[21vw] h-[55vh] border-2 border-gray-900 rounded-lg flex flex-col gap-2 hover:border-indigo-600">
+        {/* Content Section */}
+        <div className="flex-grow">
+          <h1 className="text-2xl font-bold pb-5"> {item.name} </h1>
+          <p className="text-lg pb-2">
+            <span className="font-semibold">Quantity: </span> {item.quantity}
+          </p>
+          <p className="text-lg pb-2">
+            <span className="font-semibold">Message: </span>
+            {item.message.substring(0, Math.min(60, item.message.length))} ...
+          </p>
+          <p className="text-lg">
+            <span className="font-semibold">Pickup Details: </span>
+            {item.pickupDetails.substring(0, Math.min(40, item.pickupDetails.length))} ...
+          </p>
         </div>
+  
+        {/* Button Section */}
+        <div className="mt-auto">
+          <button className=" w-full text-gray-900 p-2 rounded-lg font-bold border-4 hover:text-white hover:bg-indigo-600">
+            Claim
+          </button>
+        </div>
+      </div>
     );
-}
-
-export default ClaimCard;
+  }
+  
+  export default ClaimCard;
+  

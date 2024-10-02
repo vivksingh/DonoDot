@@ -14,7 +14,7 @@ function Header(){
         { name: 'Home', href: '/' },
         { name: 'Donate', href: '/donate' },
         { name: 'Claim', href: '/claim' },
-        { name: 'About us', href: '#' },
+        { name: 'About us', href: '/about-us' },
       ]
     
     useEffect(() => {
