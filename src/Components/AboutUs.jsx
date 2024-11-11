@@ -9,7 +9,8 @@ function AboutUs() {
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
         }}>
-            <div className="max-w-5xl text-center px-4">
+          
+          <div className="max-w-5xl text-center px-4">
           <h1 className="text-4xl font-bold mb-6">About Us</h1>
           <p className="text-lg mb-8">
             Welcome to <strong>DONO</strong>, where generosity meets purpose! We are a community-driven platform committed to connecting those in need with those willing to give. Our goal is simple: to help individuals in underserved communities by providing them with essential items—free of charge. Whether you're here to donate or receive, we believe that every act of kindness helps create a ripple effect, spreading hope and goodwill. Join us in making a difference, one donation at a time!

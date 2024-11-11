@@ -4,49 +4,50 @@ import bg from '../../assets/claimbg.jpeg';
 
 function ClaimPage(){
     const items = [{
-        id: `item-${Date.now()}-${Math.random()*1000}`,
+        id: `item-${Date.now()-Math.random()*1000}`,
         name: "Food",
         quantity: 10,
         message: "Here something to eat! and dont eat soo much that your tummy hurts.",
         pickupDetails: "Pickup details"
     }, {
-        id: `item-${Date.now()}-${Math.random()*1000}`,
+        id: `item-${Date.now() - Math.random()*1000}`,
         name: "Clothes",
         quantity: 5,
         message: "These are my old clothes that dont fit me anymore",
         pickupDetails: "Pickup details"
     }, {
-        id: `item-${Date.now()}-${Math.random()*1000}`,
+        id: `item-${Date.now() - Math.random()*1000}`,
         name: "Medicine",
         quantity: 15,
         message: "These are some medicines that I dont need anymore",
         pickupDetails: "Pickup details"
     },{
-        id: `item-${Date.now()}-${Math.random()*1000}`,
+        id: `item-${Date.now() - Math.random()*1000}`,
         name: "Money",
         quantity: 2000,
         message: "This is my salary, dont let my wife know",
         pickupDetails: "Pickup details"
-    },{
-        id: `item-${Date.now()}-${Math.random()*1000}`,
+    },
+    {
+        id: `item-${Date.now()-Math.random()*1000}`,
         name: "Food",
         quantity: 10,
         message: "Here something to eat! and dont eat soo much that your tummy hurts.",
         pickupDetails: "Pickup details"
     }, {
-        id: `item-${Date.now()}-${Math.random()*1000}`,
+        id: `item-${Date.now() - Math.random()*1000}`,
         name: "Clothes",
         quantity: 5,
         message: "These are my old clothes that dont fit me anymore",
         pickupDetails: "Pickup details"
     }, {
-        id: `item-${Date.now()}-${Math.random()*1000}`,
+        id: `item-${Date.now() - Math.random()*1000}`,
         name: "Medicine",
         quantity: 15,
         message: "These are some medicines that I dont need anymore",
         pickupDetails: "Pickup details"
     },{
-        id: `item-${Date.now()}-${Math.random()*1000}`,
+        id: `item-${Date.now() - Math.random()*1000}`,
         name: "Money",
         quantity: 2000,
         message: "This is my salary, dont let my wife know",
