@@ -24,14 +24,17 @@ function App() {
         
         {/* Protected Routes */}
         <Route path='/donate' element={
-          <ProtectedRoute>
-            <DonatePage />
-          </ProtectedRoute>
+           
+              <DonatePage />
+            
+         
         } />
+        
         <Route path='/claim' element={
           
             <ClaimPage />
           
+         
         } />
         
         <Route path='/about-us' element={<AboutUs />} />

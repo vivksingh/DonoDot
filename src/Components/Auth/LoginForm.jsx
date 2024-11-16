@@ -2,12 +2,13 @@ import bg from "../../assets/loginpage.jpg";
 import { Link } from "react-router-dom";
 
 function LoginForm() {
+  
   return (
     <section>
       <div
         className="pt-32 min-h-screen flex justify-center items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.60), rgba(255,255,255,1)), url(${bg})`,
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,1)), url(${bg})`,
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',  
           backgroundSize: 'cover',
@@ -19,13 +20,14 @@ function LoginForm() {
 
           <form action="" className="pt-8 flex flex-col items-center">
             <div className="w-[80%] flex items-center justify-between p-4">
-              <label htmlFor="email" className="text-lg font-semibold">
+              <label htmlFor="username" className="text-lg font-semibold">
                 Username
               </label>
               <input
-                type="email"
-                name="email"
-                id="email"
+                required
+                type="username"
+                name="username"
+                id="username"
                 className="w-[60%] p-2 rounded-lg border border-gray-300"
               />
             </div>
@@ -35,6 +37,7 @@ function LoginForm() {
                 Password
               </label>
               <input
+                required
                 type="password"
                 name="password"
                 id="password"

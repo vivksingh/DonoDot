@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
 function DonateForm() {
+  const moneyRef = useRef();
+  const [file, setFile] = useState(null);
   const [isMoney, setIsMoney] = useState(true);
   const [formData, setFormData] = useState({
     category: "money",
@@ -9,9 +11,7 @@ function DonateForm() {
     quantity: "",
     pickupDetails: "",
   });
-  const [file, setFile] = useState(null); // State for the image file
 
-  const moneyRef = useRef();
 
   const handleCategoryChange = () => {
     const money = moneyRef.current.value === "money";
@@ -41,8 +41,8 @@ function DonateForm() {
       quantity: formData.quantity,
       ...(isMoney ? {} : {
         pickupDetails: formData.pickupDetails,
-        item: formData.item,
-        imageFile: file, // Include the image file here
+        name: formData.item,
+        imageFile: file, 
       }),
     };
 

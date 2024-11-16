@@ -32,7 +32,7 @@ function Footer() {
       <div id="links" className="flex flex-col gap-5 sm:flex-row sm:gap-12">
         <Link to="/about-us">Terms of Use</Link>
         <Link to="/about-us">About Us</Link>
-        <Link to="/about-us#faq">FAQs</Link>
+        <Link to="/about-us">FAQs</Link>
         <Link to="/about-us">Contact Us</Link>
         <Link to="/about-us#mission">Our Mission</Link>
         </div>
