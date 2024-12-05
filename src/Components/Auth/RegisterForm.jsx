@@ -35,11 +35,21 @@ function RegisterForm() {
         return res;
       })
       .catch(err => {
-        alert('an error occured');
         console.log(err);
-        return true;
+        return false;
       });
   };
+
+  const checkUsername = () => {
+    const username = user.username.trim();
+
+    if(username.length < 7) {
+      alert("Username should be at least 7 characters long");
+      return false;
+    }
+
+    return true;
+  }
   
 
   const onSubmit = async (e) => {
@@ -47,6 +57,10 @@ function RegisterForm() {
 
     if (!isValidPassword()) {
       alert("Password does not match! Try again");
+      return;
+    }
+
+    if(!checkUsername()) {
       return;
     }
 
@@ -67,6 +81,25 @@ function RegisterForm() {
     data.append("user", new Blob([JSON.stringify(userData)], { type: "application/json" }));
     data.append("profile_pic", img);
 
+    fetch("http://localhost:8080/users/register", {
+      method: "POST",
+      body: data,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to register user");
+        }
+        
+        return response.json();
+      })
+      .then((result) => {
+        alert("Registration successful!");
+        console.log(result);
+      })
+      .catch((error) => {
+        alert("Registration failed. Please try again.");
+        console.error(error);
+      });
     
 
     // Perform the form submission with your backend endpoint
