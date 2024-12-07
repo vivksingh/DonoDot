@@ -9,7 +9,6 @@ function RegisterForm() {
   const [user, setUser] = useState({
     username: "",
     name: "",
-    password: "",
     about: "",
     address: "",
   });
@@ -73,13 +72,17 @@ function RegisterForm() {
     const userData = {
       name: user.name,
       username: user.username,
-      password: user.password,
+      password: passwordRef.current.value,
       about: user.about,
       address: user.address,
     };
 
     data.append("user", new Blob([JSON.stringify(userData)], { type: "application/json" }));
     data.append("profile_pic", img);
+
+    console.log(data);
+    
+    console.dir(data);
 
     fetch("http://localhost:8080/users/register", {
       method: "POST",
@@ -127,7 +130,7 @@ function RegisterForm() {
               <div className="w-full flex justify-between">
                 <div className="w-[45%] flex items-center gap-4">
                   <label htmlFor="username" className="text-lg font-semibold">
-                    Username
+                    Email
                   </label>
                   <input
                     required

@@ -26,9 +26,11 @@ export default function HeroSection() {
           </div>
           
           <div className="text-center ">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Power To Change Lives For The Better
-            </h1>
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-8xl">
+              DONO
+              </h1>
+              <h2 className='text-4xl font-bold tracking-tight text-gray-100 sm:text-3xl'> FOR THE CHANGE</h2> 
+            
 
 
 

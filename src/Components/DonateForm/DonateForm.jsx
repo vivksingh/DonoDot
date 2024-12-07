@@ -3,9 +3,9 @@ import { useEffect, useRef, useState } from "react";
 function DonateForm() {
   const moneyRef = useRef();
   const [file, setFile] = useState(null);
-  const [isMoney, setIsMoney] = useState(true);
+  const [isMoney, setIsMoney] = useState(false);
   const [formData, setFormData] = useState({
-    category: "money",
+    category: "food",
     item: "",
     message: "",
     quantity: "",
@@ -46,19 +46,22 @@ function DonateForm() {
       }),
     };
 
+    console.log(donationData);
     // Append the JSON object and file to FormData
     data.append("imageFile", file); // Add image file
     data.append("item", new Blob([JSON.stringify(donationData)], { type: "application/json" }));
 
     try {
-      const response = await fetch("http://localhost:8080/item", {
+      const response = await fetch("http://localhost:8080/items/add", {
         method: "POST",
         body: data,
       });
 
       if (response.ok) {
+        alert("donate submitted")
         console.log("Donation submitted successfully");
       } else {
+        alert("error")
         console.error("Failed to submit donation");
       }
     } catch (error) {
@@ -77,7 +80,7 @@ function DonateForm() {
             className={`border-2 ${isMoney ? `w-[31vw]` : `w-48`}`}
             id="category"
             name="category"
-            defaultValue="money"
+            defaultValue="food"
             ref={moneyRef}
             onChange={handleCategoryChange}
           >

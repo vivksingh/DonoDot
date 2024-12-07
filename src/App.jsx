@@ -10,6 +10,7 @@ import Claim from './Components/ClaimPage/Claim'
 import ProtectedRoute from './Components/Auth/ProtectedRoute';
 import LoginForm from './Components/Auth/LoginForm';
 import RegisterForm from './Components/Auth/RegisterForm';
+import AdminPanel from './Components/AdminPanel/AdminPanel'
 
 function App() {
   return (
@@ -24,20 +25,21 @@ function App() {
         
         {/* Protected Routes */}
         <Route path='/donate' element={
-           
-              <DonatePage />
-            
+           <ProtectedRoute>
+            <DonatePage />
+          </ProtectedRoute>
          
         } />
         
         <Route path='/claim' element={
-          
+          <ProtectedRoute>
             <ClaimPage />
-          
+          </ProtectedRoute>
          
         } />
         
         <Route path='/about-us' element={<AboutUs />} />
+        <Route path='/admin' element={<AdminPanel />} />
         <Route path='/claim/:id' element={<Claim />} />
       </Routes>
 

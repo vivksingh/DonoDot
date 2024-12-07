@@ -28,7 +28,7 @@ function AboutUs() {
             </li>
             <li className="mb-4">
               <strong>Who can receive donations?</strong> <br />
-              Anyone in need can create an account and browse the available items. Once they find something they need, they can request it directly from the donor.
+              Anyone in need can create an account and browse the available items.
             </li>
             <li className="mb-4">
               <strong>Is there a cost to donate or receive items?</strong> <br />

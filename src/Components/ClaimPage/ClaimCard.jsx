@@ -31,7 +31,7 @@ function ClaimCard({ item }) {
       {/* Button Section */}
       <div className="mt-auto">
         <button className="w-full text-gray-900 p-2 rounded-lg font-bold border-4 hover:text-white hover:bg-indigo-600" onClick={handleClaim}>
-          Claim
+          Collect
         </button>
       </div>
     </div>

@@ -64,7 +64,7 @@ function ClaimDetails() {
             </p>
 
             <div className="m-auto flex gap-20">
-              <button className="border-2 rounded-lg p-3 text-lg font-semibold hover:bg-indigo-600 hover:text-white">Claim Now</button>
+              <button className="border-2 rounded-lg p-3 text-lg font-semibold hover:bg-indigo-600 hover:text-white">Collect Now</button>
               <button className="border-2 rounded-lg p-3 text-lg font-semibold hover:bg-indigo-600 hover:text-white">Cancel</button>
             </div>
           </div>

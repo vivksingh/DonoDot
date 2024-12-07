@@ -16,7 +16,7 @@ function DonatePageHero() {
                   SAVE A LIFE TODAY
                 </h1>
 
-                <div className="p-4 w-[60vw] h-[27vh] text-center">Globally, an estimated 150 million people are homeless, with many more facing inadequate housing or living in precarious conditions. Around 9 million people die of hunger and related causes every year, a stark reminder of widespread food insecurity. More than 800 million people worldwide are undernourished, and billions face poverty, lack of access to healthcare, clean water, and basic human needs. 
+                <div className="p-4 w-[60vw] h-[27vh] text-center">Globally, an estimated 150 million people are helpless, with many more living in precarious conditions. Around 9 million people die of hunger and related causes every year, a stark reminder of widespread food insecurity. More than 800 million people worldwide are undernourished, and billions face poverty, lack of access to healthcare, clean water, and basic human needs. 
                 </div>
 
                 <div className="flex items-center justify-center gap-x-6">
