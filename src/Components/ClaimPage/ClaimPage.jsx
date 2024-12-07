@@ -45,7 +45,10 @@ function ClaimPage() {
                     ) : error ? (
                         <p className="text-red-500">{error}</p>
                     ) : items.length > 0 ? (
-                        items.map((item) => <ClaimCard key={item.id} item={item} />)
+                        // Filter unclaimed items and render them
+                        items
+                            .filter((item) => !item.claimed) // Filter items where claimed is false
+                            .map((item) => <ClaimCard key={item.id} item={item} />)
                     ) : (
                         <p>No items available to display.</p>
                     )}
