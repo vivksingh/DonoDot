@@ -27,24 +27,8 @@ function AdminPanel() {
             });
     }, []);
 
-    // Fetch users
-    useEffect(() => {
-        fetch("http://localhost:8080/users/all") // Replace with actual backend endpoint
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                setUsers(data);
-                setLoadingUsers(false);
-            })
-            .catch(err => {
-                setErrorUsers(err.message);
-                setLoadingUsers(false);
-            });
-    }, []);
+    // Fetch users with token
+    
 
     return (
         <div className="pt-48 min-h-screen p-10 bg-gray-100">
@@ -82,31 +66,7 @@ function AdminPanel() {
             </section>
 
             {/* Users Section */}
-            <section>
-                <h2 className="text-2xl font-semibold mb-5">All Users</h2>
-                {loadingUsers && <p>Loading users...</p>}
-                {errorUsers && <p className="text-red-500">Error: {errorUsers}</p>}
-                {!loadingUsers && !errorUsers && (
-                    <table className="table-auto w-full border-collapse border border-gray-400">
-                        <thead>
-                            <tr className="bg-gray-200">
-                                <th className="border border-gray-400 px-4 py-2">ID</th>
-                                <th className="border border-gray-400 px-4 py-2">Username</th>
-                                <th className="border border-gray-400 px-4 py-2">Email</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {users.map(user => (
-                                <tr key={user.id}>
-                                    <td className="border border-gray-400 px-4 py-2">{user.id}</td>
-                                    <td className="border border-gray-400 px-4 py-2">{user.username}</td>
-                                    <td className="border border-gray-400 px-4 py-2">{user.email}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                )}
-            </section>
+            
         </div>
     );
 }
